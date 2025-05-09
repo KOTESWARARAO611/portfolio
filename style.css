@@ -1,6 +1,19 @@
+/* cursor */
+
+
+    .cursor-circle {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 20px;
+      height: 20px;
+      background-color: orange;
+      border-radius: 50%;
+      pointer-events: none;
+      transform: translate(-50%, -50%);
+      z-index: 9999;
+    }
 /* about me */
-
-
 .logo{
   width: 50px;
   height: 50px;
@@ -45,19 +58,23 @@
 }
 
 #option{
-  color:beige;
+  background-color:chartreuse;
+  color:black;
   font-weight: 600;
+  box-shadow: 10px 10px 10px black;
   
 }
 #option:hover{
-  background-color:chartreuse;
-  color:chocolate;
+ background-color:orange;
+  color:black;
+  font-weight: 600;
   box-shadow: 10px 10px 10px black;
+  transform: scale(1.2);
   
 } 
 #option:active{
   background-color:#007bff;
-  color:chocolate;
+  color:black;
 }
 
 
@@ -163,12 +180,12 @@ body {
     height: 250px;
     border-radius: 50%;
     object-fit: cover;
-    border: 5px solid green;
+    border: 5px solid linear-gradient(270deg,aqua,blueviolet);
     box-shadow:  0px 0px 30px wheat;
     transition: 0.3s;
 }
 .profile-pic:hover {
-    transform: scale(1.05);
+    transform: scale(1.1);
 }
 
 .about-title {
@@ -181,15 +198,17 @@ body {
 }
 .skills-list li {
     display: inline-block;
-    background: #007bff;
-    color: #fff;
+    background:chartreuse ;
+    color: #070707;
     padding: 8px 15px;
     margin: 5px;
     border-radius: 20px;
     transition: 0.3s;
 }
 .skills-list li:hover {
-    background: #0056b3;
+    background: orange;
+    transform: scale(1.2);
+    color: black;
 }
 
 .contact-icons a {
@@ -205,8 +224,8 @@ body {
 /* Resume Button */
 .resume-btn {
     display: inline-block;
-    background: #28a745;
-    color: #fff;
+    background:  linear-gradient(270deg,aqua,blueviolet);
+    color: #070707;
     padding: 12px 30px;
     font-size: 18px;
     border-radius: 25px;
@@ -295,7 +314,7 @@ body {
     align-items: center;
 }
 .edu-card:hover {
-    transform: translateY(-10px);
+    transform: translateY(-15px);
     box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
 }
 .edu-icon {
@@ -342,7 +361,7 @@ body {
 
 body {
     font-family: Arial, sans-serif;
-    background: #f0f2f5;
+    background: #3a7cdf;
     color: #333;
     line-height: 1.6;
     margin: 0;
@@ -363,7 +382,7 @@ body {
     position: relative;
     width: 180px;
     height: 180px;
-    background: conic-gradient(#4a90e2 calc(var(--percent) * 3.6deg), #e0e0e0 0deg);
+    background: conic-gradient(chartreuse calc(var(--percent) * 3.6deg), #da7e05 0deg);
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -371,15 +390,17 @@ body {
     transition: transform 0.3s, box-shadow 0.3s;
 }
 .skill:hover {
-    transform: scale(1.1);
+    transform: scale(1.2);
     box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+    background: conic-gradient(#1a55f8 calc(var(--percent) * 3.6deg), #019c1b 0deg);
 }
+
 .skill::before {
     content: "";
     position: absolute;
     width: 160px;
     height: 160px;
-    background: #fff;
+    background: #dfe2e6;
     border-radius: 50%;
 }
 .skill-content {
@@ -415,14 +436,24 @@ body {
 h2 {
     color: #0056b3;
 }
+#live{
+  text-decoration: none;
+  background-color:  linear-gradient(270deg,aqua,blueviolet);
+}
 
 /* Grid Layout Styling */
+
+
 .card {
     transition: transform 0.3s, box-shadow 0.3s;
+    background-color:rgb(51, 49, 47);
 }
 .card-title{
   color: chartreuse;
   font-weight: 600;
+}
+.card-text{
+  color: #f0f2f5;
 }
 .card:hover {
     transform: scale(1.05);
@@ -434,7 +465,7 @@ h2 {
     position: relative;
     padding: 20px 0;
 }
-.timeline::before {
+.timeline::before { 
     content: '';
     position: absolute;
     top: 0;
@@ -452,6 +483,18 @@ h2 {
     background: #fff;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.live{
+  background:linear-gradient(270deg,aqua,greenyellow);
+  text-decoration: none;
+  font-weight: 600;
+  color: #070707;
+}
+.git{
+  background:linear-gradient(270deg,aqua,violet);
+  text-decoration: none;
+  font-weight: 600;
+  color: #070707;
 }
 .timeline-item:nth-child(even) {
     left: 55%;
@@ -482,6 +525,11 @@ h2 {
 }
 
 /* certifications */
+#certificates:hover{
+  background-color:orange;
+  border-radius: 20px;
+  color: black;
+}
 
 body {
   font-family: Arial, sans-serif;
@@ -502,13 +550,14 @@ body {
 }
 
 .cert-item:hover {
-  transform: translateY(-5px);
+  transform: translateY(-15px);
 }
 
 .cert-logo {
   width: 120px;
   height: 120px;
   object-fit: contain;
+  border-radius: 100px;
 }
 
 .cert-info {
@@ -531,8 +580,8 @@ body {
 }
 
 .btn-download {
-  background: #28a745;
-  color: #fff;
+  background:  linear-gradient(270deg,aqua,blueviolet);
+  color: #0c0c0c;
   border: none;
   padding: 10px 25px;
   transition: background 0.3s;
