@@ -55,8 +55,10 @@ body {
     left: 0;
     width: 20px;
     height: 20px;
-    background-color: #3498db;
+    background-color: yellow;
     border-radius: 50%;
+    border: 2px solid black;
+    box-shadow: 5px 5px 10px white;
     pointer-events: none;
     transform: translate(-50%, -50%);
     z-index: 9999;
@@ -93,10 +95,8 @@ body {
     font-weight: 600;
 }
 #option {
-    background-color: #3498db;
     color: #ecf0f1;
-    font-weight: 600;
-    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
+    font-weight: 600;   
     padding: 8px 15px;
     border-radius: 5px;
     text-decoration: none;
@@ -104,10 +104,13 @@ body {
 }
 #option:hover {
   
-    background-color: #00BFFF; 
-    color: #ffffff;
-    box-shadow: 5px 5px 12px rgba(0, 0, 0, 0.4);
+    
+    color: #00BFFF;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4);
     transform: translateY(-2px);
+    text-decoration: underline;
+    text-decoration-color: yellow;
+    text-decoration-thickness: 3px;
 }
 #option:active {
     background-color: #2471a3;
